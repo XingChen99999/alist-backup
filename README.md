@@ -31,3 +31,20 @@ sudo systemctl start alist
 ```bash
 sudo systemctl status alist   # 查看状态
 sudo systemctl restart alist  # 重启服务
+
+---
+
+## 🧩 安装脚本行为说明（install-alist.sh）
+
+该脚本会自动执行以下操作：
+
+1. 下载并解压 Alist v3.42.0 程序包
+2. 生成并写入 systemd 自启动服务文件 `/etc/systemd/system/alist.service`
+3. 自动设置服务开机启动
+4. 自动立即启动后台服务（默认端口 5244）
+
+你可以使用以下命令检查服务运行情况：
+
+```bash
+systemctl status alist
+```
