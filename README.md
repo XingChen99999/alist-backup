@@ -8,3 +8,16 @@
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/XingChen99999/alist-backup/main/install-alist.sh | bash
+
+---
+
+## 🔧 启用 systemd 开机自启服务（可选）
+
+如果希望 Alist 在开机后自动运行，可执行以下命令安装 systemd 服务：
+
+```bash
+sudo cp systemd/alist.service /etc/systemd/system/alist.service
+sudo systemctl daemon-reload
+sudo systemctl enable alist
+sudo systemctl start alist
+
