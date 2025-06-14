@@ -21,3 +21,13 @@ sudo systemctl daemon-reload
 sudo systemctl enable alist
 sudo systemctl start alist
 
+
+---
+
+## 🛠️ 自动开机自启说明
+
+执行安装脚本后会自动创建并启动 systemd 服务：
+
+```bash
+sudo systemctl status alist   # 查看状态
+sudo systemctl restart alist  # 重启服务
